@@ -1,0 +1,11 @@
+<div class="create_container">
+  <input
+  [(ngModel)]='inputText'
+  placeholder='{{placeholder}}'
+  (keyup.enter)='addToDo()'
+  (keyup)='computeTip()'
+  />
+  <div class="create_tip" [class.showTip]="inputText != '' || tipText == emptyTipText">
+    <span>{{tipText}}</span>
+  </div>
+</div>

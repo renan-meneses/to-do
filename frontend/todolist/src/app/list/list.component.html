@@ -1,0 +1,17 @@
+<create-todo (addedtodo)="addToDo($event)"></create-todo>
+<span class="status">{{status}}</span>
+<ul>
+  <li
+  *ngFor="let todo of todos"
+  (click)="clickedToDo(todo)"
+  [class.selectedToDo] = "todo === selectedToDo"
+  >
+      <input (click)="updateToDo(todo)" [(ngModel)]="todo.finished" class="listToDoCheckbox" type="checkbox"/>
+      <input
+      [(ngModel)]="todo.text"
+      (keyup)="keyTyped(todo)"
+      class="listToDoInput"
+      />
+      <span (click)="deleteToDo(todo)" class="delete_button">X</span>
+  </li>
+</ul>
