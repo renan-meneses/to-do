@@ -1,0 +1,47 @@
+ul
+{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+}
+
+ul li
+{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+ul li .listToDoInput
+{
+  display: inline-block;
+  height: 100%;
+}
+
+ul li .listToDoCheckbox
+{
+  
+}
+
+ul li.selectedToDo
+{
+  background-color: #ccc;
+}
+
+.delete_button
+{
+  float: right;
+  font-style: bold;
+  color: red;
+}
+
+.delete_button:hover
+{
+  cursor: pointer;
+}

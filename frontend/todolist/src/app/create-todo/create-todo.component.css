@@ -1,0 +1,34 @@
+.create_container
+{
+  width: 100%;
+  padding: 5px;
+  position: relative;
+  margin: 0;
+}
+
+.create_container input
+{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  margin: 0;
+}
+
+.create_tip
+{
+  position: absolute;
+  right: -200px;
+  top: 0px;
+  width: 200px;
+  height: 100%;
+  font-size: 16px;
+  font-style: italic;
+  visibility: hidden;
+  border: 1px solid black;
+  background-color: #fafafa;
+}
+
+.showTip
+{
+  visibility: visible;
+}
