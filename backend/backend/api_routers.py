@@ -5,5 +5,7 @@ from rest_framework import routers  # noqa: F401
 urlpatterns = [
     path("accounts/", include("api.accounts.urls")),
     path("tasks/", include("api.tasks.urls")),
+    path("import/", include("api.import.urls")),
+
 
 ]

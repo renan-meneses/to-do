@@ -196,12 +196,22 @@ DEFAULT_FROM_EMAIL = os.environ.get(
 
 PAGE_SIZE = os.environ.get("PAGE_SIZE", 25)
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
 
 INTERNAL_IPS = [
     # ...
     "127.0.0.1",
     # ...
 ]
+
 
 if DEBUG:
     import socket  # only if you haven't already imported this

@@ -4,10 +4,10 @@ from rest_framework.viewsets import ModelViewSet
 
 from api.accounts.serializers import UserSerializer
 from apps.accounts.models import User
-
+from rest_framework.permissions import IsAuthenticated
 
 class AccountsViewSet(ModelViewSet):
-    authentication_classes = []
+    permission_classes = (IsAuthenticated,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
     filter_backends = [

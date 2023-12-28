@@ -6,7 +6,6 @@ from api.tasks.serializers import TaskSerializer
 from apps.tasks.models import TaskModel
 from rest_framework.permissions import IsAuthenticated
 
-
 class TaskViewSet(ModelViewSet):
 
     queryset = TaskModel.objects.all()
